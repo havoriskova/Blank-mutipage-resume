@@ -1,0 +1,171 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    --gap-between-col: 5%;
+    --width-aside: 35%;
+    --page1-align: 16rem;
+    --accent-color: rgb(100, 130, 162); /**/
+    --aside-color: rgb(191, 224, 229);
+    --black: rgb(56, 57, 57);
+    color: var(--black);
+}
+
+.paper {
+    height: 29.7cm;
+    width: 21cm;
+    border: solid 1px black;
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+ }
+
+.content {
+    width: 94%;
+    height: 94%;
+    position: relative;
+}
+
+/* header, main, aside {
+    border: solid 2px green;
+} */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17rem;
+    width: 100%;
+    background-color: var(--accent-color);
+    z-index: 100;
+    color: white;
+    text-align: center;
+    padding: 10% 0 10% 37%;
+}
+
+
+h1 {
+    text-transform: capitalize;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--aside-color);
+    padding: .5rem 0;
+    margin: 1rem 0 1rem;
+}
+
+h3.bigger-top-margin {
+    margin: 3rem 0 1rem;
+}
+
+aside {
+    width: var(--width-aside);
+    height: 100%;
+    background-color: var(--aside-color);
+    position: absolute;
+    z-index: 200;
+    padding: 3%;
+    text-align: center;
+}
+
+aside img {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    border: transparent .1rem solid;
+    position: relative;
+    /* box-shadow: 0 0 15px 2px rgba(0 0 0 / .5); */
+}
+
+
+.aside-page1-align {
+    position: absolute;
+    top: 0;
+    padding-top: var(--page1-align);
+    width: 82%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding-bottom: .5rem; 
+}
+
+li.row {
+    display: inline-block;
+    margin: 1rem .5rem;
+}
+
+main {
+    height: 100%;
+    width: calc(100% - var(--width-aside) - var(--gap-between-col));
+    position: relative;
+    left: calc(var(--width-aside) + var(--gap-between-col));
+    /* background-color: lightcoral; */
+}
+
+.paper-1 main {
+    padding-top: var(--page1-align);
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 1rem 0 .3rem;
+}
+
+h4.bigger-top-margin {
+    padding: 2.5rem 0 .3rem;
+}
+
+h5 {
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: .2rem 0 .5rem;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 5%;
+    background-color: var(--accent-color);
+    padding: 5%;
+    z-index: 300;
+    color: white;
+    font-size: 1.1rem;
+}
+
+aside a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: var(--aside-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
